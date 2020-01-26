@@ -136,7 +136,7 @@ class Installer extends LibraryInstaller
         $themes = isset($config['themes']) ? $config['themes'] : [];
     
         foreach ($themes as $themeFolder) {
-            $packageConfig['themes'][] = $this->getRelativeVendorDir() . DIRECTORY_SEPARATOR . $package->getPrettyName() . DIRECTORY_SEPARATOR . ComposerHelper::parseDirectorySeperator(ltrim($themeFolder, '/'));
+            $packageConfig['themes'][] = $this->getRelativeVendorDir() . DIRECTORY_SEPARATOR . $packageFolder . DIRECTORY_SEPARATOR . ComposerHelper::parseDirectorySeperator(ltrim($themeFolder, '/'));
         }
         
         return $packageConfig;
